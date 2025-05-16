@@ -30,16 +30,5 @@
 
 برای نوشتن کد در LaTeX در زبان فارسی، من پیشنهاد می‌کنم که از دو ویرایشگر texstudio و vscode به همراه افزونهٔ LaTeX Workshop استفاده نمایید.
 
-## منابع
-
-تمام کدهای استتفاده شده در این قسمت، از چند منبع زیر تهیه شده است
-
-- <https://github.com/kookma/Persian-Beamer-Templates>
-- <http://qa.parsilatex.com/14100>
-- <http://qa.parsilatex.com/14148>
-- <https://github.com/sinamomken/tehran-thesis>
-- <http://parsilatex.com/examples/?s=presentation>
-  - مثال‌های بیشتر <http://parsilatex.com/examples/>
-- <https://shahroodut.ac.ir/fa/as/?id=S138>
 
 </div>
