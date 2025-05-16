@@ -37,56 +37,9 @@
 % font
 % ---------------------------------------
 
-\newfontfamily\TitrFont[Path={./font/}, Scale=1]{IRTitr.ttf}
-\newfontfamily\NormalFont[Path={./font/}, BoldFont={IRLotusICEE_Bold.ttf}, BoldItalicFont={IRLotusICEE_BoldIranic.ttf}, ItalicFont={IRLotusICEE_Iranic.ttf},Scale=1.2]{IRLotusICEE.ttf}
-
-\newif\ifirfonts
-
-\makeatletter
 % تعریف قلم فارسی و انگلیسی و مکان قلم‌ها
-\ifirfonts
-  \settextfont[Path={./font/}, BoldFont={IRLotusICEE_Bold.ttf}, BoldItalicFont={IRLotusICEE_BoldIranic.ttf}, ItalicFont={IRLotusICEE_Iranic.ttf},Scale=1.2]{IRLotusICEE.ttf}
-  % LiberationSerif or FreeSerif as free equivalents of Times New Roman
-  \setlatintextfont[Path={./font/}, BoldFont={LiberationSerif-Bold.ttf}, BoldItalicFont={LiberationSerif-BoldItalic.ttf}, ItalicFont={LiberationSerif-Italic.ttf},Scale=1]{LiberationSerif-Regular.ttf}
-  % چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
-  % و گزینهٔ displaymathdigits=persian را از خط ۱۰۹ حذف کنید.
-  %\setdigitfont[Path={./font/}, Scale=1.2]{IRLotusICEE.ttf}
-  % تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
-  \setiranicfont[Path={./font/}, Scale=1.3]{IRLotusICEE_Iranic.ttf}				% ایرانیک، خوابیده به چپ
-  \setmathsfdigitfont[Path={./font/}]{IRTitr.ttf}
-  \defpersianfont\titlefont[Path={./font/}, Scale=1]{IRTitr.ttf}
-  % برای تعریف یک قلم خاص عنوان لاتین، خط بعد را فعال و ویرایش کنید و خط بعد از آن را غیرفعال کنید.
-  % \deflatinfont\latintitlefont[Scale=1]{LiberationSerif}
-  \font\latintitlefont=cmssbx10 scaled 2300 %cmssbx10 scaled 2300
+\settextfont{XB Niloofar}
 
-\else
-  \settextfont{XB Niloofar}
-  \setlatintextfont{Junicode}
-  % چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
-  % و گزینهٔ displaymathdigits=persian را از خط ۱۰۹ حذف کنید.
-  %\setdigitfont{XB Niloofar}
-  % \setdigitfont{Junicode}
-  % تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
-  % \setmathsfdigitfont{XB Titre}
-  \defpersianfont\titlefont{XB Titre}
-  \deflatinfont\latintitlefont[Scale=1.1]{Junicode}
-\fi
-\makeatother
-
-% برای استفاده از قلم نستعلیق خط بعد را فعال کنید.
-% \defpersianfont\nastaliq[Scale=1.2]{IranNastaliq}
-
-
-% ---------------------------------------
-% frame options
-% ---------------------------------------
-
-% \setbeamerfont{section name}{family=\TitrFont}
-\setbeamerfont{section title}{family=\TitrFont,size=\huge}
-\setbeamerfont{subsection title}{size=\Large}
-% \setbeamerfont{frametitle}{family=\TitrFont}
-\setbeamerfont{title}{family=\TitrFont}
-\setbeamerfont{subtitle}{family=\NormalFont}
 
 % \setbeamertemplate{section in toc}[circle]
 % \setbeamertemplate{frametitle continuation}{\gdef\beamer@frametitle{}} % framebreaks without numbering
