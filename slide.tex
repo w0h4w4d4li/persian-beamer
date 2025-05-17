@@ -134,11 +134,11 @@
 
 
 \title
- [شکستن پروتکل‌های رمزنگاری با استفاده از حملات کوانتومی متغیر پیشرفته]
-{شکستن پروتکل‌های رمزنگاری با استفاده از حملات کوانتومی متغیر پیشرفته}
+ [شکستن پروتکل‌های رمزنگاری با استفاده از حملات کوانتومی سازگارپذیر پیشرفته]
+{شکستن پروتکل‌های رمزنگاری با استفاده از حملات کوانتومی سازگارپذیر پیشرفته}
 
 \author[محمدعلی خواجه‌ئیان]{محمدعلی خواجه‌ئیان}
-\subtitle{دفاع پروپوزال}
+\subtitle{}
 \institute[دانشکده فنی/دانشگاه تهران]{
     استاد راهنما: زهرا شاطرزاده‌یزدی \\
     دانشکدهٔ علوم مهندسی  /  دانشگاه تهران 
@@ -149,7 +149,7 @@
 % \AtBeginDocument{
     \makeatletter
     \hypersetup{
-        pdftitle={شکستن پروتکل‌های رمزنگاری با استفاده از حملات کوانتومی متغیر پیشرفته},
+        pdftitle={شکستن پروتکل‌های رمزنگاری با استفاده از حملات کوانتومی سازگارپذیر پیشرفته},
         pdfauthor={محمدعلی خواجه‌ئیان},
         pdfsubject={Thesis in Computer Science},
 %        pdfkeywords={\@latinkeywords},
@@ -205,65 +205,22 @@
 
 \section{تعریف مسئله}
 \begin{frame}
-    \frametitle{مقدمه}
+    \frametitle{تعریف مسئله}
 
-    \begin{columns}[onlytextwidth]
-        \setbeamercolor{alerted text}{fg=blue}
-        \setbeamerfont{alerted text}{series=\bfseries}
-        \setbeamercovered{transparent}
-        \begin{column}{.4\textwidth}
-            % \raggedleft
-            \begin{moredi}
-                \item نمونه از یک لیست دولایه در کنار یک تصویر
-                \begin{moredi}[<1>]
-                    \item در این لیست موارد زیادی می‌تواند قرار بگیرد
-                    \item مثلاً
-                    \item $\cdots$
-
-                \end{moredi}
-            \end{moredi}
-        \end{column}
-        \begin{column}{.6\textwidth}
-            % \raggedleft
-            \begin{moredi}
-                \item این مورد برای یک ترکیب دولایه ای آماده شده
-                \begin{moredi}
-                    \item<1> این مورد فقط در قسمت اول دیده می‌شود
-                    \item \alert<2>{این مورد تأکیدی در صفحهٔ دوم دیده می‌شود}
-                    \item<1> موارد بیشتر
-
-                \end{moredi}
-            \end{moredi}
-            \begin{figure}
-                % \includegraphics[width=\textwidth]{./img/social-sais.jpg}
-                \vspace{-1em}
-                \includegraphics[height=0.35\textheight]{logo.png}
-                \caption{اولین تصویر }
-            \end{figure}
-        \end{column}
-        % \begin{column}{.01\textwidth}\end{column}
-    \end{columns}
+    \textbf{الگوریتم های کوانتومی سازگارپذیر\LTRfootnote{Variational Quantum Algorithms}} که از ترکیب پردازش کلاسیک و کوانتومی استفاده می‌کنند، گزینه‌ای مناسب برای \textbf{رایانه‌های کوانتومی اندازه‌میانی پراختلال}\LTRfootnote{Noisy Intermediate Scale Quantum Device} هستند. این پژوهش کارایی الگوریتم های کوانتومی سازگارپذیر را در شکستن \textbf{رمزنگاری یکسان‌کلید}\LTRfootnote{Symmetric-Key Cryptography} و بهینه‌سازی این حمله‌ها بررسی می‌کند.
 
 \end{frame}
 
 \section{اهداف}
-\subsection{زنجیرهٔ مارکوف}
 \begin{frame}
-    \frametitle{زنجیرهٔ مارکوف}
+    \frametitle{اهداف پژوهش}
+    اهداف اصلی این پروژه به شرح زیر هستند:
 
-    زنجیرهٔ مارکوف\LTRfootnote{Markov Chain}
-    \begin{moredi}
-        \item مدلی برای توصیف توالی رخدادهای احتمالی (\textbf{فرایند تصادفی}\LTRfootnote{Stochastic process})
-        \item احتمال هر رخداد فقط به وضعیت رخداد قبلی خود وابسته (\textbf{بدون حافظه}\LTRfootnote{Memory less})
-        \item قابل تعریف در دو حالت: زمان گسسته و زمان پیوسته
-    \end{moredi}
-    % \begin{eqnarray}
-    %     \label{eqn:discreate-time-markov-chain}
-    %     \Pr(X_{n+1}=x\mid X_{1}=x_{1},X_{2}=x_{2},\ldots ,X_{n}=x_{n})=\Pr(X_{n+1}=x\mid X_{n}=x_{n}) \\
-    %     \label{eqn:continous-time-markov-chain}
-    %     \Pr(X_{t_{n+1}}=i_{n+1}\mid X_{t_{0}}=i_{0},X_{t_{1}}=i_{1},\ldots ,X_{t_{n}}=i_{n})=p_{i_{n}i_{n+1}}(t_{n+1}-t_{n})
-    % \end{eqnarray}
-    \pause
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{اهداف پژوهش}
     \begin{table}
         \caption{حالت‌های معروف برای مدل مارکوف}
         \vspace{-1em}
@@ -281,184 +238,10 @@
 
 \end{frame}
 
-\subsection{نظریهٔ میدان متوسط}
-\begin{frame}
-    \frametitle{نظریهٔ میدان متوسط (\lr{MFT}\LTRfootnote{Mean Field Theory})}
-
-    \begin{moredi}
-        \item رفتار مدل‌های بزرگ و پیچیدهٔ تصادفی را به کمک یک مدل ساده‌تر
-        \begin{moredi}
-            \item تبدیل یک مسئله با تعداد بسیار زیادی از اجزای کوچک که با یکدیگر در ارتباط هستند و رفتار تصادفی دارند
-            \item به یک مسئله سادهٔ تک ذره‌ای
-            \item تحلیل رفتار میانگین کل ذرات را مدل می‌کند
-        \end{moredi}
-        \item تبدیل و تحلیل یک مسئلهٔ بین ذره‌ای برای تعداد بی‌شمار ذره به یک روش تک ذره‌ای
-    \end{moredi}
-    \begin{figure}
-        \begin{tikzpicture}
-            {\fill (3.1,0) circle (0.1);}
-            \draw[thick,->] (1,0) -- node[above] {MFT} (3,0) ;
-            \draw (0,0) ellipse (1 and 1);
-            \clip (0,0) ellipse (1 and 1);
-            \pgfmathsetseed{24122015}
-            \foreach \p in {1,...,500} { \fill (1*rand,1*rand) circle (0.02);  }
-        \end{tikzpicture}
-        \caption{تبدیل مسئله بسیار ذره‌ای به تک ذره‌ای برای تحلیل رفتار کل ذرات در کنار هم به کمک نظریهٔ میدان متوسط}
-        \label{fig:mft-sample}
-    \end{figure}
-
-\end{frame}
-
-\subsection{مدل‌های انتشار بیماری}
-\begin{frame}
-    \frametitle{مدل اولیهٔ مستعد-بیمار-ایمن (\lr{SIR})}
-
-    \begin{columns}[onlytextwidth]
-        \begin{column}{.5\textwidth}
-            \begin{moredi}
-                \item مدل SIR در سال ۱۹۲۷ میلادی، توسط آقای کِرماک\footnote[frame]{W. O. Kermack} و آقای مَک‌کِندریک\footnote[frame]{A. G. McKendrick}
-                \begin{moredi}
-                    \item سالم (در معرض ابتلا) در قالب $S(t)$
-                    \item مبتلا در قالب $I(t)$
-                    \item بهبود یافته (یا ایمن) در قالب $R(t)$
-                \end{moredi}
-            \end{moredi}
-            \vspace{-1em}
-
-        \end{column}
-        \begin{column}{.5\textwidth}
-            \begin{figure}
-                \centering
-                \begin{tikzpicture}[thick,scale=1.1, every node/.style={scale=1}]
-                    \node[state] (s) at (-2, 0 ) {S};
-                    \node[state] (i) at ( 0 ,0 ) {I};
-                    \node[state] (r) at ( 2, 0 ) {R};
-
-                    \draw[->] (s) edge node [anchor=north] {$\beta$} (i);
-                    \draw[->] (i) edge[above] node [anchor=north] {$\gamma$} (r);
-                \end{tikzpicture}
-                \caption{مدل مارکوف انتشار بیماری SIR}
-                \label{fig:SIR}
-            \end{figure}
-            \begin{equation}
-                \label{eqn:sir-ode-formulation}
-                \begin{aligned}
-                    {\frac {dS}{dt}} & =-{\frac {\beta SI}{N}}         \\
-                    \frac {dI}{dt}   & ={\frac {\beta SI}{N}}-\gamma I \\
-                    \frac {dR}{dt}   & =\gamma I
-                    %                    N                & =S+I+R
-                \end{aligned}
-            \end{equation}
-        \end{column}
-    \end{columns}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{مدل‌های معروف دیگر}
-
-    \begin{moredi}
-        \setbeamercovered{transparent}
-        \item<1> \lr{SIS}: بازگشت به حالت مستعد پس از بیماری
-        \item<1> \lr{SIRS}:‌ بازگشت به دورهٔ مستعد پس از یک دورهٔ مشخص
-        \item<1-2> \lr{SEIS}: وجود یک دورهٔ نهان و بدون علامت پس از ابتلا و قبل از بروز عفونت
-        \item<1> \lr{MSIR}: در نظر گرفتن وضعیت مصونیت کودکان در مقابل بیماری
-        \item<1-2> \lr{SAIS}: در نظر گرفتن وضعیت آگاه برای کاهش نرخ ابتلا
-        \item<1> \lr{SIRC}: با وضعیت ناقل\LTRfootnote{Carrier}
-        \item<1> \lr{SIRV}: با وضعیت هوشیاری\LTRfootnote{Vigilant}
-
-    \end{moredi}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{مدل مستعد-آگاه-بیمار-مستعد (\lr{SAIS})}
-
-    \begin{columns}[onlytextwidth]
-        \begin{column}{.5\textwidth}
-            \begin{moredi}
-                % \item یک وضعیت جدید برای هر گره در نظر گرفته می‌شود که فرد با آگاهی و آمادگی از خطر بیماری و رعایت نکات پیشگیری
-                \item کاهش نرخ ابتلا از $\beta$ به $\beta_a$ برای افراد آگاه و مراقب
-                \item تغییر وضعیت به حالت آگاه و مراقب با نرخ $\kappa$
-            \end{moredi}
-            \begin{figure}[ht]
-                \centering
-                \includegraphics[width=\textwidth]{./img/sais-transition.pdf}
-                \caption{تغییرات گذرا برای مدل SAIS}
-                \label{fig:sais-transition}
-            \end{figure}
-            % \vspace{-1em}
-            % \begin{eqnarray}
-            %     \label{eq:sais-math}
-            %     \dfrac{dS}{dt}&=&\gamma I - (\beta+\kappa) S\dfrac{I}{N}\\
-            %     \dfrac{dA}{dt}&=&\kappa S\dfrac{I}{N} - \beta_a A\dfrac{I}{N}\\
-            %     \dfrac{dI}{dt}&=&(\beta S + \beta_a A)\dfrac{I}{N} - \gamma I\\
-            %     \label{eq:sais-math-end}
-            %     N&=&S+A+I
-            % \end{eqnarray}
-        \end{column}
-        \begin{column}{.5\textwidth}
-            \begin{figure}[ht]
-                \centering
-                \begin{tikzpicture}[thick,scale=1.1, every node/.style={scale=1.0}]
-                    \node[state] (s) at (-1.5, 0 ) {S};
-                    \node[state] (a) at ( 0 ,-2 ) {A};
-                    \node[state] (i) at ( 1.5, 0 ) {I};
-
-                    \draw[->] (i) edge[bend left, below] node [anchor=south] {$\gamma$} (s);
-                    \draw[->] (s) edge[bend left, above] node [anchor=north] {$\beta$} (i);
-                    \draw[->] (a) edge[bend right, above] node [anchor=east] {$\beta_a$} (i);
-                    \draw[->] (s) edge[bend right, above] node [anchor=west] {$\kappa$} (a);
-                \end{tikzpicture}
-                \caption{مدل مارکوف انتشار بیماری SAIS}
-                \label{fig:SAIS}
-            \end{figure}
-        \end{column}
-    \end{columns}
-
-\end{frame}
-
-\subsection{منطق فازی}
-\begin{frame}[allowframebreaks]
-    \frametitle{منطق فازی}
-
-    \begin{moredi}
-        \item روشی برای مدل کردن ارتباط بین ورودی و خروجی
-        \item تعریف \textbf{مجموعهٔ فازی}\LTRfootnote{Fuzzy Set}
-        \item اعضای مجموعهٔ فازی شامل \textbf{متغیرهای زبانی} هستند که مقادیر آن‌ها از \textbf{مقادیر زبانی}\LTRfootnote{Linguistic values} انتخاب می‌شود.
-        \item تعریف مقدار حدودی بین ۰ تا ۱ برای ورودی و خروجی‌ها (\textbf{درجهٔ عضویت}\LTRfootnote{Membership grade})
-    \end{moredi}
-
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[height=.3\textheight]{Fuzzy_logic_temperature_en.pdf}
-        \caption{تابع عضویت فازی برای دمای محیط}
-        \label{fig:fuzzy-logic-temperature}
-    \end{figure}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{روش عملکرد منطق فازی}
-
-    \begin{enumerate}\RTList
-        \item تبدیل ورودی‌های عددی به \textbf{متغیرهای زبانی}\LTRfootnote{Linguistic variable} (غیر دقیق و حسی) یا \textbf{فازی سازی}
-              \begin{moredi}
-                  \item بر اساس  \textbf{تابع عضویت فازی}
-              \end{moredi}
-        \item \textbf{استنتاج فازی} مطابق با \textbf{قواعد فازی} تعریف شده (بر اساس توصیف زبانی اگر $\leftarrow$ آنگاه)
-        \item تبدیل خروجی فازی به یک متغیر عددی (\textbf{فازی گشایی})
-              \begin{moredi}
-                  \item بر اساس  \textbf{تابع عضویت فازی}
-                  \item به کمک روش‌های تجمیع سازی نتایج
-              \end{moredi}
-    \end{enumerate}
-
-\end{frame}
 
 \section{ضرورت انجام پژوهش}
 \begin{frame}
-    \frametitle{کارهای پیشین}
+    \frametitle{ضرورت انجام پژوهش}
 
     دسته بندی کارهای پیشین در زمینهٔ شبکه‌های اجتماعی و انتشار بیماری  یا ویروس:
     {
@@ -568,38 +351,6 @@
 
 \end{frame}
 
-% \appendix
-\section{صفحات پشتیبان}
-
-\begin{frame}
-
-    \begin{example}
-    این یک مثال است.
-    \end{example}
-
-    \begin{definition}
-    این یک تعریف است.
-    \end{definition}
-
-    \begin{theorem}
-    این یک قضیه است.
-    \end{theorem}
-\end{frame}
-
-\begin{frame}
-\frametitle{اثبات ریاضی}
-\begin{theorem}<1->[Pythagoras]
-$ a^2 + b^2 = c^2$
-یا
-    \[c^2=a^2+b^2\]
-\end{theorem}
-\begin{proof}<2->
-$\omega +\phi = \epsilon $
-\end{proof}
-\begin{corollary}<3->
-$ x + y = y + x  $
-\end{corollary}
-\end{frame}
 
 \begin{frame}[noframenumbering]
     \frametitle{نتیاج شبیه‌سازی آماری}
@@ -612,28 +363,6 @@ $ x + y = y + x  $
         \caption{نتیجهٔ اجرای شبیه‌سازی آماری در دو حالت}
         \label{fig:ode-sais}
     \end{figure}
-
-\end{frame}
-
-\begin{frame}[noframenumbering]
-    \frametitle{}
-
-    \small
-    \begin{algorithm}[H]
-        \caption{الگوریتم اجرای برنامهٔ شبیه‌سازی برای حالت امید ریاضی}
-        \label{alg:simulation-expectation}
-        \begin{algorithmic}[1]
-            \REQUIRE زمان $t_{max}$ به عنوان زمان لازم برای انجام شبیه‌سازی،\\
-            \REQUIRE توزیع درجهٔ گراف برای شبیه‌سازی،
-            \ENSURE ماتریس تغییرات گراف از لحظهٔ ۰ تا $t_{max}$.
-            \FOR {t از ۰ \TO $t_{max}$}
-            \STATE محاسبهٔ نرخ انتقال بیماری
-            \STATE محاسبهٔ نرخ یادگیری-فراموشی
-            \STATE محاسبهٔ وضعیت جدید مدل مارکوف بیماری و آگاهی
-            \ENDFOR
-            \RETURN {ماتریس تغییرات زمانی}
-        \end{algorithmic}
-    \end{algorithm}
 
 \end{frame}
 
