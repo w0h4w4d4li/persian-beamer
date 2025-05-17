@@ -215,127 +215,62 @@
 \begin{frame}
     \frametitle{اهداف پژوهش}
     اهداف اصلی این پروژه به شرح زیر هستند:
-
-
+    \setbeamercovered{transparent}
+    \begin{enumerate}\RTList
+        \item طراحی و پیاده‌سازی نسخه‌های بهینه‌شده از الگوریتم های کوانتومی سازگارپذیر جهت کاهش زمان اجرا و افزایش دقت
+        \item<1> کاهش تعداد کیوبیت‌های موردنیاز از طریق به‌کارگیری \textbf{کدگذاری غیرمتعامد}\LTRfootnote{Non-Orthogonal Encoding}
+        \item<1> ارائه الگوریتمی کارا برای استفاده روی پلتفرم‌های رایانه‌های کوانتومی اندازه‌میانی پراختلال با قابلیت حمل به دستگاه‌های کوانتومی پیشرفته‌تر در آینده
+    \end{enumerate}
 \end{frame}
+
 
 \begin{frame}
     \frametitle{اهداف پژوهش}
-    \begin{table}
-        \caption{حالت‌های معروف برای مدل مارکوف}
-        \vspace{-1em}
-        \small
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \textbf{حالت‌ها}       & \textbf{زمان پیوسته}       & \textbf{زمان گسسته}        \\
-            \hline
-            \textbf{وضعیت گسسته}  & فرایند مارکوف              & زنجیره مارکوف              \\
-            \hline
-            \textbf{وضعیت پیوسته} & فرایند مارکوف وضعیت پیوسته & زنجیره مارکوف وضعیت پیوسته \\
-            \hline
-        \end{tabular}
-    \end{table}
-
+    اهداف اصلی این پروژه به شرح زیر هستند:
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item ارائه الگوریتمی کارا برای استفاده روی پلتفرم‌های رایانه‌های کوانتومی اندازه‌میانی پراختلال با قابلیت حمل به دستگاه‌های کوانتومی پیشرفته‌تر در آینده
+        \item مقایسه عملکرد الگوریتم طراحی‌شده با الگوریتم‌های \textbf{بی‌رویه}\LTRfootnote{Brute-Force} کلاسیک و الگوریتم \textbf{گروور}\LTRfootnote{Grover\'s Algorithm} از نظر سرعت، دقت و منابع مصرفی
+        \item ارزیابی مقاومت پروتکل‌های رمزنگاری یکسان‌کلید در برابر حملات مبتنی بر الگوریتم‌های کوانتومی سازگارپذیر
+    \end{enumerate}
 \end{frame}
 
 
 \section{ضرورت انجام پژوهش}
 \begin{frame}
     \frametitle{ضرورت انجام پژوهش}
-
-    دسته بندی کارهای پیشین در زمینهٔ شبکه‌های اجتماعی و انتشار بیماری  یا ویروس:
-    {
-    \setbeamercovered{transparent}
-    \begin{enumerate}\RTList
-        \item<1-2> انتشار بیماری
-        \item ساختار عمومی انتشار بیماری
-        \item تأثیر گذاری اجتماعی و نفوذ فکری
-        \item تغییرات آگاهی و رفتار اجتماعی
-        \item<1> گراف پویا و تغییرات یال و گره
-        \item<1> تعادل و پایداری گراف
-        \item<1> کنترل شبکه و تغییر سیاست
-        \item<1> پیش‌بینی انتشار بیماری
-        \item<1> انتشار ویروس و بد افزارِ رایانه‌ای
-
-    \end{enumerate}
-    }
-\end{frame}
-
-\begin{frame}
-    \frametitle{انتشار بیماری}
-
-    \begin{moredi}
-        \item بررسی مدل آشکار و نهان بر میزان شیوع جامعه \cite{chen2020time}
-        \item بررسی مدل \lr{SEIR} برای بیماری کووید-۱۹ با توجه به ارتباط‌های بین شهری و بین کشوری در اروپا \cite{wang2019coevolution,estrada2020covid}
-        \item بررسی نویز (خطا در اطلاعات ورودی) و تأثیر آن بر نتیجهٔ تحلیل مدل \lr{SIS} \cite{vizuete2020graphon}
-        \item در نظر گرفتن واکسیناسیون در مدل \lr{SIS} \cite{khanjanianpak2020competition}
-        \item تطبیق اطلاعات بیماری کووید-۱۹ در کشور فرانسه بر روی مدل \lr{SEIR} \cite{efimov2020interval}
-    \end{moredi}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{ساختار عمومی انتشار بیماری}
-
-    \begin{moredi}
-        \item ساختار عمومی انتشار بیماری برای مدل‌های رایج (مثل \lr{SIS, SAIS}) \cite{moon2020group}
-        \item بررسی ساختارهای متداول بیماری بر روی شبکه‌های چند لایه \cite{abhishek2020sis}
-    \end{moredi}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{تأثیر گذاری اجتماعی و نفوذ فکری}
-
-    \begin{moredi}
-        \item تحلیل انتشار شایعه در شبکه‌های اجتماعی برخط با در نظر گرفتن مدل نظریهٔ بازی \cite{huang2020developing}
-        \item ارائهٔ یک مدل شبیه‌سازی برای بررسی شرایط و نتیجه رسیدن به اجماع  در یک شبکهٔ برخط با دو گروه فکری مخالف با در نظر گرفتن کیفیت ارتباط‌ها \cite{bolzern2020opinion,nettasinghe2019diffusion}
-        \item بررسی تأثیر اخبار انتشار بیماری کووید-۱۹ در شبکه‌های اجتماعی برخط \cite{cinelli2020covid}
-    \end{moredi}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{تغییرات آگاهی و رفتار اجتماعی}
-
-    \begin{moredi}
-        \item بررسی مدل بیماری \lr{SEIV}\LTRfootnote{Susceptible-Exposed-Infected-Vigilant} برای یک شبکه و تأثیر هوشیاری افراد بر تعداد ارتباط‌های فعال با دیگران و زمان رسیدن به حالت پایدار بدون بیماری \cite{li2019control,bhowmick2020influence}
-        \item تأثیر آگاهی و میزان شیوع بیماری در ارتباط بین افراد در یک شبکهٔ دو لایه (یک لایه ثابت و یک لایهٔ متغیر)\cite{sahneh2019contact}
-    \end{moredi}
-
+    این پژوهش با هدف بررسی عملی و نظری این حملات در شرایط واقعی، کمک می‌کند تا پیش از رسیدن رایانه‌های کوانتومی قدرتمند، آمادگی لازم برای حفاظت از زیرساخت‌های امنیتی فراهم گردد.
 \end{frame}
 
 \section{پرسش های پژوهش}
 \begin{frame}
-    \frametitle{فرایند کلی حل مسئله}
-    {
-        \setbeamercovered{transparent}
-        شبیه‌سازی:
-        \begin{enumerate}\RTList
-            \item<-1> تصادفی (محاسبهٔ وضعیت و شرایط جدید هر گره و به روز کردن همه گره‌ها در یک لحظه)
-            \item<2-> آماری (محاسبهٔ امید ریاضی و میانگین وضعیت و شرایط انتقال برای کل شبکه در مدل مارکوف)
-
-        \end{enumerate}
-
-        مدل‌سازی:
-        \begin{enumerate}\RTList
-            \item تعریف متغیرهای فازی و توابع عضویت (فضای پیوسته)
-            \item تعریف جدول قواعد فازی (ارتباط بین ورودی و خروجی‌های مسئله)
-            \item تعریف روابط ریاضی تجمیع سازی برای هر گره
-            \item<2-> تعریف مدل مارکوف معادل
-            \item<2-> تعریف روابط آماری و کلی (مبتنی بر نظریهٔ میدان متوسط)
-            \item<1> تعریف الگوی بیماری
-            \item شبیه‌سازی
-
-        \end{enumerate}
-    }
+    \frametitle{پرسش های پژوهش}
+    
 \end{frame}
 
 \section{روش و فنون پژوهش}
 \subsection{بخش تئوری}
 \subsection{بخش پیاده سازی}
 
-\section{زمانبدی پیشنهادی }
+\section{زمانبدی پیشنهادی}
+\begin{frame}
+    \frametitle{زمانبدی پیشنهادی}
+    \begin{table}
+        \caption{زمانبندی پیشنهادی برای پژوهش}
+        \vspace{-1em}
+        \small
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{مرحله}       & \textbf{بازه زمانی}       & \textbf{شرح کامل فعالیت‌ها}        \\
+            \hline
+            مرحله اول  & فرایند مارکوف              & زنجیره مارکوف              \\
+            \hline
+            مرحله دوم & فرایند مارکوف وضعیت پیوسته & زنجیره مارکوف وضعیت پیوسته \\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{frame}
+
 \section{پیشینه پژوهش}
 
 \section{منابع و مراجع}
