@@ -215,11 +215,10 @@
 \begin{frame}
     \frametitle{اهداف پژوهش}
     اهداف اصلی این پروژه به شرح زیر هستند:
-    \setbeamercovered{transparent}
-    \begin{enumerate}\RTList
+    \begin{enumerate}
         \item طراحی و پیاده‌سازی نسخه‌های بهینه‌شده از الگوریتم های کوانتومی سازگارپذیر جهت کاهش زمان اجرا و افزایش دقت
-        \item<1> کاهش تعداد کیوبیت‌های موردنیاز از طریق به‌کارگیری \textbf{کدگذاری غیرمتعامد}\LTRfootnote{Non-Orthogonal Encoding}
-        \item<1> ارائه الگوریتمی کارا برای استفاده روی پلتفرم‌های رایانه‌های کوانتومی اندازه‌میانی پراختلال با قابلیت حمل به دستگاه‌های کوانتومی پیشرفته‌تر در آینده
+        \item کاهش تعداد کیوبیت‌های موردنیاز از طریق به‌کارگیری \textbf{کدگذاری غیرمتعامد}\LTRfootnote{Non-Orthogonal Encoding}
+        \item ارائه الگوریتمی کارا برای استفاده روی پلتفرم‌های رایانه‌های کوانتومی اندازه‌میانی پراختلال با قابلیت حمل به دستگاه‌های کوانتومی پیشرفته‌تر در آینده
     \end{enumerate}
 \end{frame}
 
@@ -245,12 +244,41 @@
 \section{پرسش های پژوهش}
 \begin{frame}
     \frametitle{پرسش های پژوهش}
-    
+    \begin{enumerate}
+        \item کدام بهینه‌سازی‌ها در طراحی حدس مسئله، تابع هزینه و نحوه نمونه‌گیری، به افزایش دقت حمله کمک می‌کنند؟
+        \item چه تکنیک‌هایی برای کاهش مصرف کیوبیت مؤثر هستند و آیا می‌توان بدون کاهش دقت از کدگذاری غیرمتعامد استفاده کرد؟
+        \item چگونه می‌توان این الگوریتم را در چارچوب رایانه‌های کوانتومی اندازه‌میانی پراختلال به‌طور عملی پیاده‌سازی کرد؟
+    \end{enumerate}
 \end{frame}
 
 \section{روش و فنون پژوهش}
 \subsection{بخش تئوری}
+\begin{frame}
+    \frametitle{بخش تئوری}
+    \begin{enumerate}
+        \item بررسی مفاهیم پایه رمزنگاری متقارن و مبانی رایانش کوانتومی
+        \item بررسی الگوریتم‌های کوانتومی سازگارپذیر مانند الگوریتم تخمین مقدار ویژه و الگوریتم بهینه سازی تخمینی کوانتومی
+        \item مدلسازی حمله به‌صورت یک مسئله بهینه‌سازی، تعریف تابع هزینه
+    \end{enumerate}
+\end{frame}
 \subsection{بخش پیاده سازی}
+\begin{frame}
+    \frametitle{بخش پیاده‌سازی}
+    \begin{enumerate}
+        \item پیاده‌سازی الگوریتم حمله در محیط پنی‌لین، و در صورت امکان دستگاه واقعی
+        \item حمله به نسخه‌های ساده‌شده بلوک‌رمزها برای تحلیل نتایج اولیه و استخراج زمان‌های همگرایی
+        \item به‌کارگیری کدگذاری غیرمتعامد و بررسی تأثیر آن در کاهش منابع موردنیاز (تعداد کیوبیت و عمق مدار)
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{بخش پیاده‌سازی}
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item پیاده‌سازی ساختارهای بهینه در فضای پارامترها مانند استفاده از مختصات کروی برای افزایش سرعت همگرایی
+        \item تحلیل نتایج به‌دست‌آمده و مقایسه با الگوریتم گروور و بی رویه کلاسیک
+    \end{enumerate}
+\end{frame}
 
 \section{زمانبدی پیشنهادی}
 \begin{frame}
@@ -272,6 +300,19 @@
 \end{frame}
 
 \section{پیشینه پژوهش}
+\begin{frame}[noframenumbering]
+    \frametitle{پیشینه پژوهش}
+
+    \begin{figure}[htb]
+        %	\vspace{-2cm}
+        \centering
+        \subfloat[یادگیری=$0.75$ و فراموشی=$0.5$]{\includegraphics[width=0.48\textwidth]{ode-75-50.pdf}}\
+        \subfloat[یادگیری=$0.5$ و فراموشی $0.75$]{\includegraphics[width=0.48\textwidth]{ode-50-75.pdf}}
+        \caption{نتیجهٔ اجرای شبیه‌سازی آماری در دو حالت}
+        \label{fig:ode-sais}
+    \end{figure}
+
+\end{frame}
 
 \section{منابع و مراجع}
 \begin{frame}[allowframebreaks,noframenumbering]
@@ -286,20 +327,6 @@
 
 \end{frame}
 
-
-\begin{frame}[noframenumbering]
-    \frametitle{نتیاج شبیه‌سازی آماری}
-
-    \begin{figure}[htb]
-        %	\vspace{-2cm}
-        \centering
-        \subfloat[یادگیری=$0.75$ و فراموشی=$0.5$]{\includegraphics[width=0.48\textwidth]{ode-75-50.pdf}}\
-        \subfloat[یادگیری=$0.5$ و فراموشی $0.75$]{\includegraphics[width=0.48\textwidth]{ode-50-75.pdf}}
-        \caption{نتیجهٔ اجرای شبیه‌سازی آماری در دو حالت}
-        \label{fig:ode-sais}
-    \end{figure}
-
-\end{frame}
 
 \end{document}
 
