@@ -208,7 +208,7 @@
     \frametitle{تعریف مسئله}
 
     \textbf{الگوریتم های کوانتومی سازگارپذیر\LTRfootnote{Variational Quantum Algorithms}} که از ترکیب پردازش کلاسیک و کوانتومی استفاده می‌کنند، گزینه‌ای مناسب برای \textbf{رایانه‌های کوانتومی اندازه‌میانی پراختلال}\LTRfootnote{Noisy Intermediate Scale Quantum Device} هستند. این پژوهش کارایی الگوریتم های کوانتومی سازگارپذیر را در شکستن \textbf{رمزنگاری یکسان‌کلید}\LTRfootnote{Symmetric-Key Cryptography} و بهینه‌سازی این حمله‌ها بررسی می‌کند.
-    \cite{zhang2022variational}
+    \cite{zhang2022variational,cerezo2021variational,nielsen2010quantum}
 \end{frame}
 
 \section{اهداف}
@@ -218,6 +218,7 @@
     \begin{enumerate}
         \item طراحی و پیاده‌سازی نسخه‌های بهینه‌شده از الگوریتم های کوانتومی سازگارپذیر جهت کاهش زمان اجرا و افزایش دقت
         \item کاهش تعداد کیوبیت‌های موردنیاز از طریق به‌کارگیری \textbf{کدگذاری غیرمتعامد}\LTRfootnote{Non-Orthogonal Encoding}
+        \cite{garcia2023variational}
         \item ارائه الگوریتمی کارا برای استفاده روی پلتفرم‌های رایانه‌های کوانتومی اندازه‌میانی پراختلال با قابلیت حمل به دستگاه‌های کوانتومی پیشرفته‌تر در آینده
     \end{enumerate}
 \end{frame}
@@ -230,6 +231,7 @@
         \setcounter{enumi}{3}
         \item ارائه الگوریتمی کارا برای استفاده روی پلتفرم‌های رایانه‌های کوانتومی اندازه‌میانی پراختلال با قابلیت حمل به دستگاه‌های کوانتومی پیشرفته‌تر در آینده
         \item مقایسه عملکرد الگوریتم طراحی‌شده با الگوریتم‌های \textbf{بی‌رویه}\LTRfootnote{Brute-Force} کلاسیک و الگوریتم \textbf{گروور}\LTRfootnote{Grover\'s Algorithm} از نظر سرعت، دقت و منابع مصرفی
+        \cite{grover1996fast,hoffstein2014introduction}
         \item ارزیابی مقاومت پروتکل‌های رمزنگاری یکسان‌کلید در برابر حملات مبتنی بر الگوریتم‌های کوانتومی سازگارپذیر
     \end{enumerate}
 \end{frame}
@@ -257,7 +259,9 @@
     \frametitle{بخش تئوری}
     \begin{enumerate}
         \item بررسی مفاهیم پایه رمزنگاری متقارن و مبانی رایانش کوانتومی
+        \cite{nielsen2010quantum,hoffstein2014introduction}
         \item بررسی الگوریتم‌های کوانتومی سازگارپذیر مانند \textbf{الگوریتم تعیین مقدارویژه}\LTRfootnote{Quantum Eigen Solver} و \textbf{الگوریتم بهینه‌سازی تقریبی کوانتومی}\LTRfootnote{Quantum Approximation Optimization Algorithm}
+        \cite{cerezo2021variational}
         \item مدلسازی حمله به‌صورت یک مسئله بهینه‌سازی، تعریف تابع هزینه
     \end{enumerate}
 \end{frame}
@@ -267,6 +271,7 @@
     \begin{enumerate}
         \item پیاده‌سازی الگوریتم حمله در محیط \textbf{پنی‌لین}\LTRfootnote{PennyLane}، و در صورت امکان دستگاه واقعی
         \item حمله به نسخه‌های ساده‌شده \textbf{بلوک‌رمزها}\LTRfootnote{Cipher Blocks} برای تحلیل نتایج اولیه و استخراج زمان‌های همگرایی
+        \cite{hoffstein2014introduction}
         \item به‌کارگیری کدگذاری غیرمتعامد و بررسی تأثیر آن در کاهش منابع موردنیاز (تعداد کیوبیت و عمق مدار)
     \end{enumerate}
 \end{frame}
@@ -276,6 +281,7 @@
     \begin{enumerate}
         \setcounter{enumi}{3}
         \item پیاده‌سازی ساختارهای بهینه در فضای پارامترها مانند استفاده از \textbf{مختصات ابرکروی}\LTRfootnote{Hyperspherical Coordinates} برای افزایش سرعت همگرایی
+        \cite{bermejo2024improving}
         \item تحلیل نتایج به‌دست‌آمده و مقایسه با الگوریتم گروور و بی رویه کلاسیک
     \end{enumerate}
 \end{frame}
@@ -306,18 +312,18 @@
 \end{frame}
 
 \section{پیشینه پژوهش}
-\begin{frame}[noframenumbering]
+\begin{frame}
     \frametitle{پیشینه پژوهش}
+    \begin{moredi}
+        \item در \cite{denisenko2019application} از الگوریتم گروور برای جستجوی کلید در بلوک‌رمز استفاده می‌کند. نویسندگان یک سیستم کوانتومی با حداقل تعداد کیوبیت‌ها (۱۹ کیوبیت) طراحی کردند که می‌تواند کلید بلوک‌رمز را تنها با یک جفت متن اصلی و متن رمز شده پیدا کند. این مدار کوانتومی با استفاده از شبیه‌ساز کوییپر پیاده‌سازی و تست شده است.     
+    \end{moredi}
+\end{frame}
 
-    \begin{figure}[htb]
-        %	\vspace{-2cm}
-        \centering
-        \subfloat[یادگیری=$0.75$ و فراموشی=$0.5$]{\includegraphics[width=0.48\textwidth]{ode-75-50.pdf}}\
-        \subfloat[یادگیری=$0.5$ و فراموشی $0.75$]{\includegraphics[width=0.48\textwidth]{ode-50-75.pdf}}
-        \caption{نتیجهٔ اجرای شبیه‌سازی آماری در دو حالت}
-        \label{fig:ode-sais}
-    \end{figure}
-
+\begin{frame}
+    \frametitle{پیشینه پژوهش}
+    \begin{moredi}
+        \item در \cite{zhang2022variational} یک روش کوانتومی متغیر برای حمله به رمزهای متقارن مبتنی بر بلوک‌رمز یکسان‌کلید ارائه می‌دهد. آن‌ها نشان دادند که این روش می‌تواند در برخی موارد حتی از الگوریتم گروور سریع‌تر عمل کند و کلید را با موفقیت بازیابی نماید. با این حال، آزمایش‌ها روی نسخه‌های ساده‌شده انجام شده و هنوز چالش‌هایی از جمله امکان کاهش تعداد کیوبیت‌ها و بهینه‌سازی این الگوریتم وجود دارد.    
+    \end{moredi}
 \end{frame}
 
 \section{منابع و مراجع}
